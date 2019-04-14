@@ -42,9 +42,13 @@ app.get('/restaurants/new', (req, res) => {
   res.send('新增 Todo 頁面')
 })
 
-// 顯示一筆 Todo 的詳細內容
+// show detail
 app.get('/restaurants/:id', (req, res) => {
-  res.send('顯示 Todo 的詳細內容')
+  Restaurant.find((err, restaurants) => {
+    const restaurant = restaurants.find(restaurant => restaurant.id == req.params.id)
+    if (err) return console.error(err)
+    return res.render('show', { restaurant: restaurant })
+  })
 })
 
 // 新增一筆  Todo
