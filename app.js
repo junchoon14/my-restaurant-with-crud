@@ -106,14 +106,15 @@ app.post('/restaurants/:id', (req, res) => {
   })
 })
 
-// 刪除 Todo
+// delete data
 app.post('/restaurants/:id/delete', (req, res) => {
-  res.send('刪除 Todo')
-})
-
-// show detail
-app.get('/restaurants/:restaurant_id', (req, res) => {
-  res.render('show')
+  Restaurant.findById(req.params.id, (err, restaurant) => {
+    if (err) return console.error(err)
+    restaurant.remove(err => {
+      if (err) return console.error(err)
+      return res.redirect('/')
+    })
+  })
 })
 
 // listen

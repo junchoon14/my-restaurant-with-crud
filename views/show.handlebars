@@ -37,7 +37,14 @@
       <img class="rounded mx-auto d-block mb-4 w-100" src="{{restaurant.image}}" alt="{{restaurant.name}}"
         style="max-width: 600px;">
 
-      <a href="/restaurants/{{restaurant.id}}/edit" class="btn btn-default btn-dark edit_button" role="button">編輯餐廳</a>
+      <div>
+        <a href="/restaurants/{{restaurant.id}}/edit" class="btn btn-default btn-dark edit_button float-left"
+          role="button">編輯餐廳</a>
+
+        <form action="/restaurants/{{restaurant.id}}/delete" method="POST">
+          <button type="submit" class="btn btn-light delete_button float-right">刪除</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

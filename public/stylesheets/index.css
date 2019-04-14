@@ -42,14 +42,13 @@ header {
   font-size: 25px;
 }
 
-/*---- edit button ---*/
-.edit_button {
-  margin: 10px 0 50px 0;
+/*---- edit button & delete button ---*/
+.edit_button, .delete_button {
+  margin: 10px 30px 50px 0;
 }
 
-.edit_button:hover {
-  background-color: rgb(116, 39, 39);
-  margin: 10px 0 50px 0;
+.edit_button:hover, .delete_button:hover {
+  background-color: rgb(175, 173, 173);
 }
 
 /*---- search bar ---*/
@@ -61,7 +60,12 @@ header {
   padding: 20px 30px;
   border: 0;
   margin-top: -60px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(151, 62, 62, 0.1);
+}
+
+/*---- delete icon ---*/
+.delete_cut:hover {
+  color: rgb(201, 103, 103);
 }
 
 /*---- create page for form ---*/
