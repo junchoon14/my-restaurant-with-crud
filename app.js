@@ -6,7 +6,7 @@ const exphbs = require('express-handlebars')
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
-mongoose.connect('mongodb://localhost/my_restaurant', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/restaurant', { useNewUrlParser: true })
 const db = mongoose.connection
 
 // connenet error
