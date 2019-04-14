@@ -1,0 +1,131 @@
+<div class="form_container">
+  <div class="row">
+    <div class="col-12 col-md-10 mx-auto">
+
+      <form action="/restaurants" method="POST">
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light" id="">
+                餐廳名稱
+              </span>
+            </div>
+            <input type="text" class="form-control" id="name" placeholder="Enter restaurant's name" name="name">
+            <small class="feedback small text-danger"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light" id="">
+                餐廳英文名稱
+              </span>
+            </div>
+            <input type="text" class="form-control" id="name_en" placeholder="Enter restaurant's Engish name"
+              name="name_en">
+            <small class="feedback small text-danger"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light" id="">
+                <i class="fas fa-utensils pr-2"></i>
+                &nbsp 餐廳類型
+              </span>
+            </div>
+            <input type="text" class="form-control" id="category" placeholder="Enter restaurant's category"
+              name="category">
+            <small class="feedback small text-danger"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light" id="">
+                <i class="fas fa-camera"></i>
+                &nbsp 餐廳照片
+              </span>
+            </div>
+            <input type="text" class="form-control" id="photo-link" placeholder="Link to restaurant's photo"
+              name="image">
+            <small class="feedback small text-danger"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light" id="">
+                <i class="fas fa-home"></i>
+                &nbsp 地址
+              </span>
+            </div>
+            <input type="text" class="form-control" id="location" placeholder="Enter restaurant's address"
+              name="location">
+            <small class="feedback small text-danger"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light" id="">
+                <i class="fas fa-phone-square"></i>
+                &nbsp 電話
+              </span>
+            </div>
+            <input type="text" class="form-control" id="phone" placeholder="Enter restaurant's phone number"
+              name="phone">
+            <small class="feedback small text-danger"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light" id="">
+                <i class="fas fa-map-pin"></i>
+                &nbsp Google Map
+              </span>
+            </div>
+            <input type="text" class="form-control" id="google_map" placeholder="Enter restaurant's google map"
+              name="google_map">
+            <small class="feedback small text-danger"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light" id="">
+                <i class="fas fa-star fa-xs"></i>
+                &nbsp 評分
+              </span>
+            </div>
+            <input type="text" class="form-control" id="rating" placeholder="Rate this: 1 ~ 5" name="rating">
+            <small class="feedback small text-danger"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-light" id="">
+                &nbsp 簡介
+              </span>
+            </div>
+            <textarea class="form-control" id="intro" aria-label="With textarea" placeholder="Introduce reataurant"
+              name="description"></textarea>
+            <small class="feedback small text-danger"></small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-info">加入我的餐廳</button>
+      </form>
+    </div>
+  </div>
+</div>
