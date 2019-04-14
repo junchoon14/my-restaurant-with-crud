@@ -29,6 +29,41 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
+// 列出全部 Todo
+app.get('/restaurants', (req, res) => {
+  res.send('列出所有 Todo')
+})
+
+// 新增一筆 Todo 頁面
+app.get('/restaurants/new', (req, res) => {
+  res.send('新增 Todo 頁面')
+})
+
+// 顯示一筆 Todo 的詳細內容
+app.get('/restaurants/:id', (req, res) => {
+  res.send('顯示 Todo 的詳細內容')
+})
+
+// 新增一筆  Todo
+app.post('/restaurants', (req, res) => {
+  res.send('建立 Todo')
+})
+
+// 修改 Todo 頁面
+app.get('/restaurants/:id/edit', (req, res) => {
+  res.send('修改 Todo 頁面')
+})
+
+// 修改 Todo
+app.post('/restaurants/:id', (req, res) => {
+  res.send('修改 Todo')
+})
+
+// 刪除 Todo
+app.post('/restaurants/:id/delete', (req, res) => {
+  res.send('刪除 Todo')
+})
+
 // show detail
 app.get('/restaurants/:restaurant_id', (req, res) => {
   res.render('show')
