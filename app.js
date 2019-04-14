@@ -24,9 +24,12 @@ const Restaurant = require('./models/restaurant')
 // setting static files
 app.use(express.static('public'))
 
-// home route
+// main route
 app.get('/', (req, res) => {
-  res.render('index')
+  Restaurant.find((err, restaurants) => {
+    if (err) return console.error(err)
+    return res.render('index', { restaurants: restaurants })
+  })
 })
 
 // 列出全部 Todo
