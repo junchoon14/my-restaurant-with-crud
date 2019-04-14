@@ -117,6 +117,18 @@ app.post('/restaurants/:id/delete', (req, res) => {
   })
 })
 
+app.get('/search', (req, res) => {
+  Restaurant.find((err, restaurants) => {
+    const restaurant = restaurants.filter(restaurant => {
+      const keyword = req.query.keyword.toLowerCase()
+      const name = restaurant.name.toLowerCase()
+      const category = restaurant.category.toLowerCase()
+      return name.includes(keyword) || category.includes(keyword)
+    })
+    return res.render('index', { restaurants: restaurant, keyword: req.query.keyword })
+  })
+})
+
 // listen
 app.listen(3000, () => {
   console.log('App is running!')
